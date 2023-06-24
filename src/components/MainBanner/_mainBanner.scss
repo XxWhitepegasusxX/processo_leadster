@@ -44,7 +44,7 @@
             h1{
                 font-weight: 700;
                 color: var(--primary-color);
-                font-size: 5.5rem;
+                font-size: Clamp(1rem, 5.5rem, 8rem);
                 margin-top: -.8rem;
                 margin-right: -0.9rem;
             }
@@ -58,7 +58,7 @@
         hr{
             margin: .5rem auto;
             border: .1px solid;
-            width: Clamp(600px, 45vw, 50vw);
+            width: Clamp(600px, 45vw, 60vw);
         }
 
         p{
@@ -72,7 +72,7 @@
     }
 }
 
-/*@media (max-width: 750px) {
+@media (max-width: 750px){
     .main-banner{
 
         .text{
@@ -97,7 +97,9 @@
                     margin-left: -.8rem;
                 } 
             }
-
+            hr{
+                width: 80vw;
+            }
             p{
                 font-size: 1rem;
             }
@@ -106,4 +108,81 @@
 
     }
 }
-*/
+
+@media (max-width: 610px) {
+    .main-banner{
+
+        .text{
+
+            .shape{
+                width: 10rem;
+                height: 2rem;
+                font-size: .85rem;
+            }
+
+            h2{
+                font-size: 1.6rem;
+            }
+
+            .principal-text{
+                h1{
+                    font-size: 3rem;
+                    margin-top: -.2rem;
+                    margin-right: -.5rem;
+                }
+                img{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    margin-left: -.5rem;
+                } 
+            }
+            hr{
+                width: 65vw;
+            }
+            p{
+                font-size: .8rem;
+            }
+
+        }
+
+    }
+}
+
+@media (max-width: 480px) {
+    .main-banner{
+
+        .text{
+
+            .shape{
+                width: 8rem;
+                height: 2rem;
+                font-size: .7rem;
+            }
+
+            h2{
+                font-size: 1.4rem;
+            }
+
+            .principal-text{
+                h1{
+                    font-size: 2.5rem;
+                    margin-top: -.2rem;
+                    margin-right: -.5rem;
+                }
+                img{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    margin-left: -.5rem;
+                } 
+            }
+            hr{
+                width: 90vw;
+            }
+            p{
+                font-size: 60%;
+            }
+
+        }
+
+    }
+}
