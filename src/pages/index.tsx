@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Header from '@/components/Header'
 import MainBanner from '@/components/MainBanner'
+import LibraryHeader from '@/components/LibraryHeader'
+
 export default function Home() {
   return (
     <>
@@ -12,6 +14,7 @@ export default function Home() {
       <main>
         <Header/>
         <MainBanner/>
+        <LibraryHeader/>
       </main>
     </>
   )

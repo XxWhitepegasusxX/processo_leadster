@@ -13,6 +13,10 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+button{
+    cursor: pointer;
+}
+
 .app__flex{
     display: flex;
 }
@@ -23,3 +27,4 @@
 
 @import '@/components/Header/header.scss';
 @import '@/components/MainBanner/mainBanner.scss';
+@import '@/components/LibraryHeader/libraryHeader.scss';
