@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-
+import { BiSolidDownArrow } from 'react-icons/bi'
 
 const LibraryHeader = () => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
     const [selected, setSelected] = useState<string>()
     const orderOptions = ["Data de publicação"]
     const [order, setOrder] = useState<string>(orderOptions[0])
@@ -9,7 +10,7 @@ const LibraryHeader = () => {
 
 
     return(
-        <div className="library-header">
+        <div className="library-header app__flex">
             <div className="app__flex category-list">
                 {categorys.map((category, index) => {
                     return (
@@ -21,9 +22,19 @@ const LibraryHeader = () => {
             </div>
             <div className="app__flex order">
                 <p>Ordenar por</p>
-                <button className="order-button">
-                    {order}
-                </button>
+                <div className="dropdown-menu">
+                    <button className="order-button app__flex" onClick={() => setIsOpen(!isOpen)}>
+                        {order}
+                        <BiSolidDownArrow/>
+                    </button>
+                    {isOpen && (
+                        <ul>
+                            <li>Ordem</li>
+                            <li>Ordem</li>
+                            <li>Ordem</li>
+                        </ul>
+                    )}
+                </div>
             </div>
         </div>
     )
