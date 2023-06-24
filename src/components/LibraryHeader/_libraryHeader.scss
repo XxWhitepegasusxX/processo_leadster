@@ -28,7 +28,7 @@
                 background-color: var(--primary-color);
             }        
     }
-}
+    }
     .order{
         align-items: center;
         gap: 10px;
@@ -64,6 +64,9 @@
                 }
             }
             .order-button{
+                min-width: 10rem;
+                display: flex;
+                justify-content: space-between;
                 padding: .5rem 1rem;
                 background-color: transparent;
                 border-radius: 12px;
@@ -71,6 +74,10 @@
                 font-size: 1rem;
                 align-items: center;
                 gap: 5px;
+                
+                &.is-open{
+                    color: var(--primary-color);
+                }
             }
         }
     }
